@@ -1,0 +1,10 @@
+#!/bin/bash
+type=$(ip link | grep 'state UP' | cut -d':' -f2 | tr -s " ")
+name=$(nmcli device show $type | grep 'GENERAL.CONNECTION' | cut -d':' -f2 | tr -s " ")
+
+if [ $type == "wlan0" ]; then
+    echo $name
+else
+  echo "None "
+fi
+

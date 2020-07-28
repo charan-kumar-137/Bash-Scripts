@@ -1,0 +1,6 @@
+#!/bin/bash
+
+volume=$(amixer -D pulse sget Master | grep 'Left' | awk -F'[][]' '{print $2}' | awk -F'%' '{print $1}')
+echo $volume
+
+exit 0

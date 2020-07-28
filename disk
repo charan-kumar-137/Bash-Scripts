@@ -1,0 +1,6 @@
+#!/bin/bash
+free=$(df -h / --output=avail | grep 'G')
+
+echo $free
+
+exit 0

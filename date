@@ -1,0 +1,8 @@
+#!/bin/bash
+
+date=$(date "+%Y-%m-%d")
+time=$(date "+%H:%M")
+
+echo $date - $time
+
+exit 0

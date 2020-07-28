@@ -1,0 +1,10 @@
+#!/bin/bash
+win_class=$(xprop -id $(xdotool getactivewindow) | grep 'WM_CLASS(STRING)' | cut -d',' -f2 | cut -d'"' -f2)
+
+if [ -z "${win_class}" ]; then
+  echo "-"
+else
+  echo $win_class
+fi
+
+exit 0

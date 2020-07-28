@@ -1,0 +1,11 @@
+#!/bin/bash
+charge=$(acpi --battery | cut -d':' -f2 | cut -d',' -f1)
+percent=$(acpi --battery | cut -d':' -f2 | cut -d',' -f2 | cut -d'%' -f1)
+
+if [ $charge == "Charging" ]; then
+  echo $percent '+'
+else
+  echo $percent '-'
+fi
+
+exit 0

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BRIGHTNESS=$(xbacklight -get)
+printf "%.0f\n" $BRIGHTNESS
+
+exit 0
